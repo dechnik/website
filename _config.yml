@@ -1,0 +1,40 @@
+name: "Lukasz Dechnik"
+description: "website"
+domain: "dechnik.net"
+
+dark_scheme: tokyo-city-terminal-dark
+light_scheme: tokyo-city-terminal-light
+printing_scheme: tomorrow # Must have #FFFFFF background
+
+
+plugins:
+  - jekyll-extlinks
+  - jekyll-relative-links
+
+extlinks:
+  attributes: 
+    class: external
+
+relative_links:
+  enabled: true
+  collections: true
+
+sass:
+  style: compact
+
+kramdown:
+  syntx_highlighter: coderay
+
+
+include: [".well-known"]
+
+source: _src
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default.html"
+      language: "en"
+      author: "Lukasz Dechnik"
