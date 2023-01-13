@@ -1,9 +1,9 @@
 name: "Lukasz Dechnik"
-description: "website"
+description: "My personal website"
 domain: "dechnik.net"
 
-dark_scheme: tokyo-city-terminal-dark
-light_scheme: tokyo-city-terminal-light
+dark_scheme: gruvbox-dark-medium
+light_scheme: gruvbox-dark-medium
 printing_scheme: tomorrow # Must have #FFFFFF background
 
 
@@ -30,7 +30,20 @@ include: [".well-known"]
 
 source: _src
 
+collections:
+  posts:
+    output: true
+    permalink: /blog/:path/index:output_ext
+    name: Posts
+
 defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post.html"
+      nav_current: "/blog/"
   -
     scope:
       path: ""
